@@ -17,8 +17,7 @@ export class HomePage {
   lineHeight: number = 500;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 150;
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('Daniel Barroso')
+  constructor() {
   }
 
 }
