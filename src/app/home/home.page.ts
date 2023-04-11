@@ -1,7 +1,7 @@
-import { Component, ElementRef, HostBinding, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { IonicModule, ScrollDetail } from '@ionic/angular';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { ScrollLineComponent } from '../scroll-line/scroll-line.component';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { ScrollLineComponent } from '../scroll-line/scroll-line.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, ScrollLineComponent],
+  imports: [IonicModule, ScrollLineComponent, RouterModule],
   encapsulation: ViewEncapsulation.None
 })
 export class HomePage {
