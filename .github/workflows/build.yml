@@ -26,7 +26,7 @@ jobs:
 
       - name: Build Ionic project
         run: |
-          ionic build --prod -- --base-href https://dbarrosourr.github.io/
+          npx ionic build --prod -- --base-href https://dbarrosourr.github.io/
       - uses: actions/upload-artifact@v3
         with:
           name: www
