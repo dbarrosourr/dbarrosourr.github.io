@@ -21,9 +21,10 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config --global --add safe.directory /__w/dbarrosourr.github.io/github-pages-deploy-action-temp-deployment-folder
       - uses: actions/checkout@v2
+      - name: Install Ionic
+        run: npm install -g @ionic/cli
       - name: Install dependencies
         run: npm install
-
       - name: Build Ionic project
         run: |
           ionic build --prod -- --base-href https://dbarrosourr.github.io/
