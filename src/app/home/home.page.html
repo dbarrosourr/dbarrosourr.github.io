@@ -74,11 +74,13 @@
   </div>
   <div id="projects">
     <div id="left-projects" class="flex-center-column project-column">
-      <img class="project-item" src="../../assets/project1.png" />
+      <ion-card>
+        <img class="project-item" src="../../assets/hightracks.png" />
+      </ion-card>
       <ion-card class="project-item">
         <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-title>TradingBOT</ion-card-title>
+          <ion-card-subtitle>2021</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
@@ -90,12 +92,27 @@
     <div id="right-projects" class="flex-center-column project-column">
       <ion-card class="project-item">
         <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-title>HighTracks</ion-card-title>
+          <ion-card-subtitle>2023</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
+          Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for
+          those in Spotify API they get inserted to MongoDB database and Firebase. Ionic Angular for the front and
+          Express.js Node.js for the back. All of this is builder, tested and deployed to Google Cloud Instance with
+          Docker using CI/CD GitHub Actions, generating reports of the quality of code. Also, it offers recommendations
+          based on GPT 3.5
+          <div class="frameworks">
+            <ion-chip>
+              <ion-label>Angular</ion-label>
+            </ion-chip>
+            <ion-chip>
+              <ion-label>Ionic</ion-label>
+            </ion-chip>
+            <ion-chip>
+              <ion-label>Express</ion-label>
+            </ion-chip>
+          </div>
         </ion-card-content>
       </ion-card>
       <img class="project-item" alt="" src="../../assets/project1.png" />
