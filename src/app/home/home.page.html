@@ -85,7 +85,20 @@
 
         <ion-card-content>
           Here's a small text description for the card content. Nothing more, nothing less.
+          <div class="frameworks">
+            <ion-chip>
+              <ion-icon name="logo-flutter"></ion-icon>
+              <ion-label>Flutter</ion-label>
+            </ion-chip>
+            <ion-chip>
+              <ion-icon name="logo-github"></ion-icon>
+              <ion-label>Github</ion-label>
+            </ion-chip>
+          </div>
         </ion-card-content>
+      </ion-card>
+      <ion-card class="project-item">
+        <img src="../../assets/project1.png" />
       </ion-card>
     </div>
     <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
@@ -112,11 +125,40 @@
               <ion-icon name="logo-docker"></ion-icon>
               <ion-label>Docker</ion-label>
             </ion-chip>
+            <ion-chip>
+              <ion-icon name="logo-firebase"></ion-icon>
+              <ion-label>Firebase</ion-label>
+            </ion-chip>
           </div>
         </ion-card-content>
       </ion-card>
       <ion-card class="project-item">
         <img src="../../assets/project1.png" />
+      </ion-card>
+      <ion-card class="project-item">
+        <ion-card-header>
+          <ion-card-title>Wimu</ion-card-title>
+          <ion-card-subtitle>2021</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for
+          those in Spotify API. Also, it offers recommendations based on GPT 3.5.
+          <div class="frameworks">
+            <ion-chip>
+              <ion-icon name="logo-angular"></ion-icon>
+              <ion-label>Angular</ion-label>
+            </ion-chip>
+            <ion-chip>
+              <ion-icon name="logo-ionic"></ion-icon>
+              <ion-label>Ionic</ion-label>
+            </ion-chip>
+            <ion-chip>
+              <ion-icon name="logo-docker"></ion-icon>
+              <ion-label>Docker</ion-label>
+            </ion-chip>
+          </div>
+        </ion-card-content>
       </ion-card>
     </div>
   </div>
