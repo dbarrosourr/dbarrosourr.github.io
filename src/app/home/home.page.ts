@@ -14,8 +14,8 @@ import { RouterModule } from '@angular/router';
 })
 export class HomePage {
 
-  lineHeight: number = 500;
-  lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 150;
+  lineHeight: number = 1175;
+  lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
 
   constructor() {
   }
