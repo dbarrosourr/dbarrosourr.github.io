@@ -73,13 +73,13 @@
     </div>
   </div>
   <div id="projects">
-    <div id="left-projects" class="flex-center-column project-column">
+    <div *ngIf="projects" id="left-projects" class="flex-center-column project-column">
       <project-image [image]="projects[0].image"></project-image>
       <project-info [project]="projects[0]"></project-info>
       <project-image [image]="projects[0].image"></project-image>
     </div>
     <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
-    <div id="right-projects" class="flex-center-column project-column">
+    <div *ngIf="projects" id="right-projects" class="flex-center-column project-column">
       <project-info [project]="projects[0]"></project-info>
       <project-image [image]="projects[0].image"></project-image>
       <project-info [project]="projects[0]"></project-info>

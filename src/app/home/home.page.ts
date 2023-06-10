@@ -1,11 +1,13 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { ScrollLineComponent } from '../scroll-line/scroll-line.component';
 import { RouterModule } from '@angular/router';
 import { ProjectImageComponent } from "./project-image/project-image.component";
 import { ProjectInfoComponent } from "./project-info/project-info.component";
 import { Project } from '../models/project.model';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { lastValueFrom } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +15,23 @@ import { Project } from '../models/project.model';
   styleUrls: ['home.page.scss'],
   standalone: true,
   encapsulation: ViewEncapsulation.None,
-  imports: [IonicModule, ScrollLineComponent, RouterModule, ProjectImageComponent, ProjectInfoComponent]
+  imports: [IonicModule, ScrollLineComponent, RouterModule, ProjectImageComponent, ProjectInfoComponent, HttpClientModule, CommonModule]
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   lineHeight: number = 1300;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
-  projects: Project[] = [];
+  projects: Project[] | undefined;
 
-  constructor() {
-    this.projects.push(new Project("HighTracks", "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5.", "2023", ["Angular", "Ionic", "Docker", "Firebase"], "../../assets/projects/hightracks.png"));
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.importProjectsJson();
+  }
+
+  async importProjectsJson() {
+    this.projects = await lastValueFrom(this.http.get<Project[]>('assets/projects.json'));
+    console.log(this.projects);
   }
 
 }
