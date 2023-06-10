@@ -10,5 +10,15 @@
             "Firebase"
         ],
         "image": "../../assets/projects/hightracks.png"
+    },
+    {
+        "name": "TradingBOT",
+        "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
+        "year": "2021",
+        "frameworks": [
+            "Flutter",
+            "Github"
+        ],
+        "image": "../../assets/projects/tradingbot.png"
     }
 ]
