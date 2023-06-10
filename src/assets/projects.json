@@ -4,10 +4,30 @@
         "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
         "year": "2023",
         "frameworks": [
-            "Angular",
-            "Ionic",
-            "Docker",
-            "Firebase"
+            {
+                "name": "Angular",
+                "icon": "logo-angular"
+            },
+            {
+                "name": "Ionic",
+                "icon": "logo-ionic"
+            },
+            {
+                "name": "NodeJS",
+                "icon": "logo-nodejs"
+            },
+            {
+                "name": "Docker",
+                "icon": "logo-docker"
+            },
+            {
+                "name": "MongoDB",
+                "icon": "logo-mongodb"
+            },
+            {
+                "name": "Express",
+                "icon": "logo-express"
+            }
         ],
         "image": "../../assets/projects/hightracks.png"
     },
@@ -16,8 +36,10 @@
         "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
         "year": "2021",
         "frameworks": [
-            "Flutter",
-            "Github"
+            {
+                "name": "Flutter",
+                "icon": "logo-angular"
+            }
         ],
         "image": "../../assets/projects/tradingbot.png"
     },
@@ -26,8 +48,10 @@
         "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
         "year": "2021",
         "frameworks": [
-            "Kotlin",
-            "Git"
+            {
+                "name": "Kotlin",
+                "icon": "logo-angular"
+            }
         ],
         "image": "../../assets/projects/wimu.png"
     }
