@@ -9,7 +9,8 @@
       {{ project.description }}
       <div class="frameworks">
         <ion-chip *ngFor="let framework of project.frameworks">
-          <ion-icon [name]="framework.icon"></ion-icon>
+          <ion-icon *ngIf="framework.icon" [name]="framework.icon"></ion-icon>
+          <ion-icon *ngIf="!framework.icon" [src]="framework.asset" class="svg"></ion-icon>
           <ion-label>{{ framework.name }}</ion-label>
         </ion-chip>
       </div>

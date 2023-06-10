@@ -21,36 +21,64 @@
                 "icon": "logo-docker"
             },
             {
+                "name": "Firebase",
+                "icon": "logo-firebase"
+            },
+            {
+                "name": "GitHub Actions",
+                "icon": "logo-github"
+            },
+            {
+                "name": "Google Cloud",
+                "icon": "logo-google"
+            },
+            {
                 "name": "MongoDB",
-                "icon": "logo-mongodb"
+                "asset": "../../assets/frameworks/mongodb.svg"
             },
             {
                 "name": "Express",
-                "icon": "logo-express"
+                "asset": "../../assets/frameworks/express.svg"
             }
         ],
         "image": "../../assets/projects/hightracks.png"
     },
     {
         "name": "TradingBOT",
-        "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
+        "description": "I developed a mobile application using Flutter and the Coinbase Pro API to visualize and monitor cryptocurrency markets.",
         "year": "2021",
         "frameworks": [
             {
                 "name": "Flutter",
-                "icon": "logo-angular"
+                "asset": "../../assets/frameworks/flutter.svg"
+            },
+            {
+                "name": "GitHub",
+                "icon": "logo-github"
             }
         ],
         "image": "../../assets/projects/tradingbot.png"
     },
     {
         "name": "Wimu",
-        "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
+        "description": "Tool for delivering notifications via Telegram and email of WIMU sports reports.",
         "year": "2021",
         "frameworks": [
             {
                 "name": "Kotlin",
-                "icon": "logo-angular"
+                "asset": "../../assets/frameworks/kotlin.svg"
+            },
+            {
+                "name": "Docker",
+                "icon": "logo-docker"
+            },
+            {
+                "name": "AWS Lambda",
+                "asset": "../../assets/frameworks/aws.svg"
+            },
+            {
+                "name": "AWS CloudWatch",
+                "asset": "../../assets/frameworks/aws.svg"
             }
         ],
         "image": "../../assets/projects/wimu.png"
