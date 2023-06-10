@@ -1,6 +1,14 @@
+section {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .project-item {
     aspect-ratio: 16/9;
-    width: 80%;
+    height: 100%;
 }
 
 ion-card-title {

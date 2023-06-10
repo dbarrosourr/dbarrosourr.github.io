@@ -17,7 +17,7 @@ import { Project } from '../models/project.model';
 })
 export class HomePage {
 
-  lineHeight: number = 1175;
+  lineHeight: number = 1300;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
   projects: Project[] = [];
 
