@@ -74,14 +74,14 @@
   </div>
   <div id="projects">
     <div id="left-projects" class="flex-center-column project-column">
-      <project-image image="../../assets/hightracks.png"></project-image>
+      <project-image [image]="projects[0].image"></project-image>
       <project-info [project]="projects[0]"></project-info>
-      <project-image image="../../assets/project1.png"></project-image>
+      <project-image [image]="projects[0].image"></project-image>
     </div>
     <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
     <div id="right-projects" class="flex-center-column project-column">
       <project-info [project]="projects[0]"></project-info>
-      <project-image image="../../assets/project1.png"></project-image>
+      <project-image [image]="projects[0].image"></project-image>
       <project-info [project]="projects[0]"></project-info>
     </div>
   </div>

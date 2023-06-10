@@ -22,7 +22,7 @@ export class HomePage {
   projects: Project[] = [];
 
   constructor() {
-    this.projects.push(new Project("HighTracks", "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5.", "2023", ["Angular", "Ionic", "Docker", "Firebase"], "../../assets/hightracks.png"));
+    this.projects.push(new Project("HighTracks", "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5.", "2023", ["Angular", "Ionic", "Docker", "Firebase"], "../../assets/projects/hightracks.png"));
   }
 
 }
