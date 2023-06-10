@@ -74,15 +74,11 @@
   </div>
   <div id="projects">
     <div *ngIf="projects" id="left-projects" class="flex-center-column project-column">
-      <project-image [image]="projects[0].image"></project-image>
-      <project-info [project]="projects[0]"></project-info>
-      <project-image [image]="projects[0].image"></project-image>
+      <project-image *ngFor="let project of projects" [image]="project.image"></project-image>
     </div>
     <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
     <div *ngIf="projects" id="right-projects" class="flex-center-column project-column">
-      <project-info [project]="projects[0]"></project-info>
-      <project-image [image]="projects[0].image"></project-image>
-      <project-info [project]="projects[0]"></project-info>
+      <project-info *ngFor="let project of projects" [project]="project"></project-info>
     </div>
   </div>
   <div style="height: 1000px;"></div>
