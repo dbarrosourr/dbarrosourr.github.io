@@ -35,5 +35,4 @@ export class ScrollLineComponent {
       this.className = "down-relative"
     }
   }
-
 }
