@@ -29,6 +29,11 @@ a:hover {
   color: var(--ion-color-primary) !important;
 }
 
+ion-button {
+  --color: var(--primary-color);
+  --border-color: var(--primary-color);
+}
+
 .container {
   max-height: 100vh;
   height: 100%;
