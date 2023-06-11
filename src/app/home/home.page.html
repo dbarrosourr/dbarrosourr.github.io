@@ -1,10 +1,10 @@
 <ion-content [scrollEvents]="true" (ionScroll)="scrollLine.onScroll($any($event))" [fullscreen]="true">
   <ion-menu side="end" class="mobile-header ion-no-border" contentId="main-content">
-    <ion-header mode="md">
+    <ion-header mode="md" class="ion-no-border">
       <ion-toolbar>
-        <ion-buttons slot="end">
-          <ion-button>CERRAR</ion-button>
-        </ion-buttons>
+        <ion-menu-toggle slot="end">
+          <ion-button fill="clear"><ion-icon name="close-outline"></ion-icon></ion-button>
+        </ion-menu-toggle>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
