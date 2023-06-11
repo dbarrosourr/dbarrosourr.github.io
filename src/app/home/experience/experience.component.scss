@@ -2,10 +2,20 @@
     justify-content: start;
 }
 
+.container h2 {
+    font-size: x-large;
+}
+
 article {
     width: 35%;
 }
 
 article p {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    article {
+        width: 80%;
+    }
 }

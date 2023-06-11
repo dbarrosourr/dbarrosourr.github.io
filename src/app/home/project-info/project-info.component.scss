@@ -11,6 +11,10 @@ section {
     max-height: 100%;
 }
 
+ion-card {
+    background-color: var(--background-light-color);
+}
+
 ion-card-title {
     color: var(--primary-color);
 }

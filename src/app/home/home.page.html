@@ -79,15 +79,13 @@
 
   <experience></experience>
 
-  <div id="projects">
-    <div *ngIf="projects" id="left-projects" class="flex-center-column project-column">
-      <project-image *ngFor="let project of projects" [image]="project.image"></project-image>
-    </div>
+  <section id="projects">
+    <article *ngFor="let project of projects">
+      <project-image [image]="project.image"></project-image>
+      <project-info [project]="project"></project-info>
+    </article>
     <scroll-line [maxHeight]="lineHeight" [offset]="offset" #scrollLine></scroll-line>
-    <div *ngIf="projects" id="right-projects" class="flex-center-column project-column">
-      <project-info *ngFor="let project of projects" [project]="project"></project-info>
-    </div>
-  </div>
+  </section>
 
   <contact></contact>
 
