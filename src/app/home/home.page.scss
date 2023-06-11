@@ -145,11 +145,19 @@ ion-header ion-buttons {
 
   @media (max-width: 500px) {
     .big-heading {
-      font-size: clamp(38px, 8vw, 80px);
+      font-size: 30px;
+    }
+
+    .container h2 {
+      font-size: unset;
     }
 
     .container h1 {
       margin-left: -3px;
+    }
+
+    .container p {
+      font-size: 14px;
     }
 
     #projects {
