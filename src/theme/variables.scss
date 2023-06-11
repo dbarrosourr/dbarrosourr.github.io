@@ -6,6 +6,17 @@
   src: url('../assets/OpenSans.ttf');
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--background-light-color);
+  background: var(--primary-color);
+}
+
+::selection {
+  color: var(--background-light-color);
+  background: var(--primary-color);
+}
+
 strong {
   color: var(--primary-color);
 }
