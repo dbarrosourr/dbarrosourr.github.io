@@ -12,6 +12,7 @@ import { IonicModule, ScrollDetail } from '@ionic/angular';
 export class ScrollLineComponent {
 
   @Input() maxHeight: number = 500;
+  @Input() offset: number = 0
   height: number = 0
   className: string = "up-relative"
   imageSize: number = 75
@@ -20,7 +21,7 @@ export class ScrollLineComponent {
 
   onScroll(ev: CustomEvent<ScrollDetail>) {
     // console.log(ev.detail.currentY)
-    const scrollInitialPosition = (document.documentElement.clientHeight / 2) + this.imageSize
+    const scrollInitialPosition = (document.documentElement.clientHeight + document.documentElement.clientHeight / 2) + this.imageSize
     this.height = (ev.detail.currentY - scrollInitialPosition) / this.maxHeight
     // console.log(document.documentElement.clientHeight / 2)
     // console.log(scrollInitialPosition)

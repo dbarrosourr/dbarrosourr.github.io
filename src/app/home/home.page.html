@@ -57,11 +57,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <div class="container">
     <div id="main-text">
-      <h1>Hi, my name is</h1>
-      <h2 class="big-heading">Daniel Barroso.</h2>
-      <h3>Computer Engineer.</h3>
+      <h3>Hi, my name is</h3>
+      <h1 class="big-heading">Daniel Barroso.</h1>
+      <h2>Computer Engineer.</h2>
       <p>I've always been passionate about Computer Science, experience as a Web Developer. Developed a Multiplatform
         App based on Flutter dedicated to visualize cryptocurrency markets for my Final Degree Project. I've got
         advanced knowledgement in Linux and Docker microservices. Focused in developing my career as a
@@ -72,16 +72,21 @@
       <ion-icon name="chevron-down" size="large"></ion-icon>
     </div>
   </div>
+
+  <experience></experience>
+
   <div id="projects">
     <div *ngIf="projects" id="left-projects" class="flex-center-column project-column">
       <project-image *ngFor="let project of projects" [image]="project.image"></project-image>
     </div>
-    <scroll-line [maxHeight]="lineHeight" #scrollLine></scroll-line>
+    <scroll-line [maxHeight]="lineHeight" [offset]="offset" #scrollLine></scroll-line>
     <div *ngIf="projects" id="right-projects" class="flex-center-column project-column">
       <project-info *ngFor="let project of projects" [project]="project"></project-info>
     </div>
   </div>
-  <div style="height: 1000px;"></div>
+
+  <contact></contact>
+
   <ion-footer collapse="fade">
     <ion-toolbar>
       <ion-title>Footer</ion-title>

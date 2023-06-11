@@ -8,6 +8,8 @@ import { Project } from '../models/project.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +17,22 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['home.page.scss'],
   standalone: true,
   encapsulation: ViewEncapsulation.None,
-  imports: [IonicModule, ScrollLineComponent, RouterModule, ProjectImageComponent, ProjectInfoComponent, HttpClientModule, CommonModule]
+  imports: [
+    IonicModule,
+    ScrollLineComponent,
+    RouterModule,
+    ProjectImageComponent,
+    ProjectInfoComponent,
+    HttpClientModule,
+    CommonModule,
+    ExperienceComponent,
+    ContactComponent
+  ]
 })
 export class HomePage implements OnInit {
 
   lineHeight: number = 1300;
+  offset: number = 1100;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
   projects: Project[] | undefined;
 
