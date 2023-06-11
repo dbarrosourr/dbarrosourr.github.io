@@ -18,4 +18,10 @@ article p {
     article {
         width: 80%;
     }
+
+    @media (max-width: 500px) {
+        .container h2 {
+            font-size: large;
+        }
+    }
 }

@@ -104,7 +104,7 @@ ion-header ion-buttons {
     margin-top: 0;
   }
 
-  .project-item {
+  project-info .project-item {
     aspect-ratio: unset !important;
   }
 
@@ -141,5 +141,24 @@ ion-header ion-buttons {
 
   .container p {
     width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    .big-heading {
+      font-size: clamp(38px, 8vw, 80px);
+    }
+
+    #projects {
+      margin: 0 50px;
+      gap: 100px;
+    }
+
+    .project-item {
+      margin: 0;
+    }
+
+    project-image>section {
+      height: fit-content !important;
+    }
   }
 }
