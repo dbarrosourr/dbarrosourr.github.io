@@ -41,7 +41,7 @@
                 "asset": "../../assets/frameworks/express.svg"
             }
         ],
-        "image": "../../assets/projects/hightracks.png"
+        "image": "../../assets/projects/hightracks.gif"
     },
     {
         "name": "TradingBOT",
@@ -57,7 +57,7 @@
                 "icon": "logo-github"
             }
         ],
-        "image": "../../assets/projects/tradingbot.png"
+        "image": "../../assets/projects/tradingbot.gif"
     },
     {
         "name": "Wimu",
@@ -81,6 +81,6 @@
                 "asset": "../../assets/frameworks/aws.svg"
             }
         ],
-        "image": "../../assets/projects/wimu.png"
+        "image": "../../assets/projects/wimu.gif"
     }
 ]
