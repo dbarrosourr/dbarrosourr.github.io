@@ -148,6 +148,10 @@ ion-header ion-buttons {
       font-size: clamp(38px, 8vw, 80px);
     }
 
+    .container h1 {
+      margin-left: -3px;
+    }
+
     #projects {
       margin: 0 50px;
       gap: 100px;
