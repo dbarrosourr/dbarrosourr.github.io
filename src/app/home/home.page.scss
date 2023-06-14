@@ -127,6 +127,10 @@ ion-header ion-buttons {
     margin: 0 15px;
   }
 
+  #links a:hover {
+    transform: translateY(-10px) !important;
+  }
+
   ion-menu>ion-content>div {
     display: flex;
     flex-direction: column;

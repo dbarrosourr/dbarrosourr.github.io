@@ -10,6 +10,7 @@ import { lastValueFrom } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
     HttpClientModule,
     CommonModule,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    EducationComponent
   ]
 })
 export class HomePage implements OnInit {
