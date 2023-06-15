@@ -33,7 +33,7 @@ import { EducationComponent } from './education/education.component';
 })
 export class HomePage implements OnInit {
 
-  lineHeight: number = 1300;
+  lineHeight: number = 1065;
   offset: number = 1100;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
   projects: Project[] | undefined;
