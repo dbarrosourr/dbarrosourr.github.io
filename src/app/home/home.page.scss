@@ -23,9 +23,7 @@ ion-header ion-buttons {
   gap: 20px;
 }
 
-#main-text {
-  width: 62%;
-}
+
 
 #links {
   position: absolute;
@@ -68,6 +66,20 @@ ion-header ion-buttons {
   animation: bounce 5s 4;
 }
 
+#landing {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#landing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-text {
+  width: 62%;
+}
 
 #main-content {
   display: none;
@@ -148,6 +160,19 @@ ion-header ion-buttons {
     font-size: 20px;
   }
 
+  #projects {
+    margin: 0 50px;
+    gap: 100px;
+  }
+
+  .project-item {
+    margin: 0;
+  }
+
+  project-image>section {
+    height: fit-content !important;
+  }
+
   @media (max-width: 500px) {
     .big-heading {
       font-size: 30px;
@@ -165,17 +190,6 @@ ion-header ion-buttons {
       font-size: 14px;
     }
 
-    #projects {
-      margin: 0 50px;
-      gap: 100px;
-    }
 
-    .project-item {
-      margin: 0;
-    }
-
-    project-image>section {
-      height: fit-content !important;
-    }
   }
 }
