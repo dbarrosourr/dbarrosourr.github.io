@@ -23,10 +23,12 @@ strong {
 
 a {
   color: var(--primary-color) !important;
+  text-decoration: none !important;
 }
 
 a:hover {
   color: var(--ion-color-primary) !important;
+  text-decoration: underline !important;
 }
 
 ion-button {
