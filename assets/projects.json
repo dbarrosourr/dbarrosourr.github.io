@@ -68,6 +68,27 @@
         "image": "../../assets/projects/tradingbot.gif"
     },
     {
+        "name": "SpringBoot Spotify Search",
+        "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API.",
+        "year": "2023",
+        "url": "https://github.com/byMagg/DWSC",
+        "frameworks": [
+            {
+                "name": "Java",
+                "asset": "../../assets/frameworks/java.svg"
+            },
+            {
+                "name": "SpringBoot",
+                "asset": "../../assets/frameworks/springboot.svg"
+            },
+            {
+                "name": "Postgres",
+                "asset": "../../assets/frameworks/postgres.svg"
+            }
+        ],
+        "image": "../../assets/projects/dwsc.gif"
+    },
+    {
         "name": "Wimu",
         "description": "Tool for delivering notifications via Telegram and email of WIMU sports reports.",
         "year": "2021",
