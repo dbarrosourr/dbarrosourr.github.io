@@ -33,7 +33,7 @@ import { EducationComponent } from './education/education.component';
 })
 export class HomePage implements OnInit {
 
-  lineHeight: number = 1065;
+  lineHeight: number = 1515;
   offset: number = 1100;
   lineInitialPosition: number = (document.documentElement.clientHeight / 2) + 100;
   projects: Project[] | undefined;
@@ -46,7 +46,6 @@ export class HomePage implements OnInit {
 
   async importProjectsJson() {
     this.projects = await lastValueFrom(this.http.get<Project[]>('assets/projects.json'));
-    console.log(this.projects);
   }
 
 }
