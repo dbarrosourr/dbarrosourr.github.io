@@ -46,7 +46,10 @@ export class HomePage implements OnInit {
 
   async importProjectsJson() {
     this.projects = await firstValueFrom(this.http.get<Project[]>('assets/projects.json'));
-    console.log(this.projects)
+  }
+
+  scrollToElement(el: HTMLElement) {
+    el.scrollIntoView({ behavior: "smooth" });
   }
 
 }

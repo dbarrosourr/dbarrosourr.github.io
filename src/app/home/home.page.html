@@ -9,14 +9,14 @@
     </ion-header>
     <ion-content class="ion-padding">
       <div>
-        <a href="#">
-          1. About
+        <a (click)="scrollToElement(experience)">
+          01. Experience
         </a>
-        <a href="#">
-          2. Experience
+        <a (click)="scrollToElement(experience)">
+          02. Projects
         </a>
-        <a href="#">
-          3. Contact
+        <a (click)="scrollToElement(contact)">
+          03. Contact
         </a>
       </div>
     </ion-content>
@@ -44,30 +44,32 @@
       </ion-buttons>
 
       <ion-buttons slot="end">
-        <a href="#">
-          01. About
+        <a (click)="scrollToElement(experience)">
+          01. Experience
         </a>
-        <a href="#">
-          02. Experience
+        <a (click)="scrollToElement(listProjects)">
+          02. Projects
         </a>
-        <a href="#">
+        <a (click)="scrollToElement(contact)">
           03. Contact
         </a>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <section class="container">
+  <section class=" container">
     <article id="main-text">
       <h1>Hi, my name is</h1>
       <h2 class="big-heading">Daniel Barroso.</h2>
       <h3>Computer Engineer.</h3>
-      <p>I've always been passionate about Computer Science, experience as a <strong>Web Developer</strong>. Developed
+      <p>I've always been passionate about Computer Science, experience as a <strong>Web Developer</strong>.
+        Developed
         a
         Multiplatform
         App based on Flutter dedicated to visualize cryptocurrency markets for my Final Degree Project. I've got
         advanced knowledgement in Linux and Docker microservices. Focused in developing my career as a
-        <strong>Full Stack Developer</strong> and <strong>DevOps</strong>, due to I consider myself as a person that
+        <strong>Full Stack Developer</strong> and <strong>DevOps</strong>, due to I consider myself as a person
+        that
         has knowledge in
         many fields in
         Computer Systems and Infraestructure.
@@ -78,12 +80,12 @@
     </div>
   </section>
 
-  <section class="container ion-justify-content-start">
+  <section #experience class="container ion-justify-content-start">
     <experience></experience>
     <education></education>
   </section>
 
-  <section id="projects">
+  <section #listProjects id="projects">
     <article *ngFor="let project of projects">
       <project-image [image]="project.image"></project-image>
       <project-info [project]="project"></project-info>
@@ -91,7 +93,9 @@
     <scroll-line [maxHeight]="lineHeight" [offset]="offset" #scrollLine></scroll-line>
   </section>
 
-  <contact></contact>
+  <section #contact>
+    <contact></contact>
+  </section>
 
   <!-- <ion-footer collapse="fade">
     <ion-toolbar>
