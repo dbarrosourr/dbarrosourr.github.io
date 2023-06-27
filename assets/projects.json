@@ -86,7 +86,7 @@
                 "asset": "../../assets/frameworks/postgres.svg"
             },
             {
-                "name": "CORBA",
+                "name": "CORBA"
             }
         ],
         "image": "../../assets/projects/dwsc.gif"
