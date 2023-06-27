@@ -24,7 +24,7 @@ export class ScrollLineComponent {
     const scrollInitialPosition = (document.documentElement.clientHeight + document.documentElement.clientHeight / 2) + this.imageSize
     this.height = (ev.detail.currentY - scrollInitialPosition) / this.maxHeight
     // console.log(document.documentElement.clientHeight / 2)
-    console.log(scrollInitialPosition)
+    // console.log(scrollInitialPosition)
     // console.log(this.height)
 
     if (this.height >= 0 && this.height <= 1) {

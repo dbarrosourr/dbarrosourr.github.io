@@ -6,7 +6,7 @@ import { ProjectImageComponent } from "./project-image/project-image.component";
 import { ProjectInfoComponent } from "./project-info/project-info.component";
 import { Project } from '../models/project.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { firstValueFrom, lastValueFrom } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
@@ -45,7 +45,8 @@ export class HomePage implements OnInit {
   }
 
   async importProjectsJson() {
-    this.projects = await lastValueFrom(this.http.get<Project[]>('assets/projects.json'));
+    this.projects = await firstValueFrom(this.http.get<Project[]>('assets/projects.json'));
+    console.log(this.projects)
   }
 
 }
