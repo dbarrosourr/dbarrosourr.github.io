@@ -25,6 +25,8 @@ ion-card-subtitle {
 
 ion-chip {
     color: var(--primary-color);
+    cursor: default;
+    pointer-events: none;
 }
 
 ion-chip ion-icon {
