@@ -3,6 +3,7 @@
         "name": "HighTracks",
         "description": "Mainly the app can be described as a Search, Insertion and rating of songs which can be added looking for those in Spotify API. Also, it offers recommendations based on GPT 3.5..",
         "year": "2023",
+        "url": "https://github.com/byMagg/HighTracksAPP",
         "frameworks": [
             {
                 "name": "Angular",
@@ -47,6 +48,7 @@
         "name": "TradingBOT",
         "description": "I developed a mobile application using Flutter and the Coinbase Pro API to visualize and monitor cryptocurrency markets.",
         "year": "2021",
+        "url": "https://github.com/byMagg/tradingbot",
         "frameworks": [
             {
                 "name": "Flutter",
@@ -55,6 +57,12 @@
             {
                 "name": "GitHub",
                 "icon": "logo-github"
+            },
+            {
+                "name": "WebSockets"
+            },
+            {
+                "name": "Coinbase API"
             }
         ],
         "image": "../../assets/projects/tradingbot.gif"

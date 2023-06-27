@@ -1,7 +1,9 @@
 <section>
   <ion-card *ngIf="project" class="project-item">
     <ion-card-header>
-      <ion-card-title>{{ project.name }}</ion-card-title>
+      <ion-card-title>{{ project.name }}
+        <a target="_blank" *ngIf="project.url" [href]="project.url"><ion-icon name="link"></ion-icon></a>
+      </ion-card-title>
       <ion-card-subtitle>{{ project.year }}</ion-card-subtitle>
     </ion-card-header>
 
@@ -10,7 +12,7 @@
       <div class="frameworks">
         <ion-chip *ngFor="let framework of project.frameworks">
           <ion-icon *ngIf="framework.icon" [name]="framework.icon"></ion-icon>
-          <ion-icon *ngIf="!framework.icon" [src]="framework.asset" class="svg"></ion-icon>
+          <ion-icon *ngIf="!framework.icon && framework.asset" [src]="framework.asset" class="svg"></ion-icon>
           <ion-label>{{ framework.name }}</ion-label>
         </ion-chip>
       </div>
