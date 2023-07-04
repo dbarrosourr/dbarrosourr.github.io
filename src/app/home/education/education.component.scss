@@ -16,12 +16,26 @@ article {
     flex-direction: column;
     width: 80%;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 article p {
     width: 100%;
     text-align: center;
     font-weight: 600;
+}
+
+article ul {
+    width: fit-content;
+}
+
+#honors {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .dot {
