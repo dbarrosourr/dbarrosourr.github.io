@@ -284,6 +284,12 @@ a:focus-visible {
 	font-size: 1.05rem;
 }
 
+.hero-location {
+	margin-top: 0.5rem;
+	color: var(--comment);
+	font-size: 0.9rem;
+}
+
 .hero-links ul {
 	display: flex;
 	flex-wrap: wrap;

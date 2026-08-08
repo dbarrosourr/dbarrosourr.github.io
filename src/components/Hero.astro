@@ -1,7 +1,10 @@
 ---
 import { cv } from '../data.js';
 const links = cv.profile.links;
-const externalAttrs = (url) => (url.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' });
+const externalAttrs = (url) =>
+	url.startsWith('mailto:') || url.startsWith('tel:')
+		? {}
+		: { target: '_blank', rel: 'noopener noreferrer' };
 ---
 
 <header id="cabecera" class="hero" data-nav="Inicio" tabindex="-1">
@@ -12,6 +15,7 @@ const externalAttrs = (url) => (url.startsWith('mailto:') ? {} : { target: '_bla
 		<span class="role-text">{cv.profile.role}</span><span class="caret" aria-hidden="true"></span>
 	</p>
 	<p class="tagline">{cv.profile.tagline}</p>
+	<p class="hero-location">{cv.profile.location}</p>
 	<nav class="hero-links" aria-label="Enlaces de contacto">
 		<ul>
 			{links.map((l) => (

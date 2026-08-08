@@ -80,6 +80,12 @@ main {
 	font-size: 10pt;
 }
 
+.hero-location {
+	margin: 0 0 0.4em;
+	font-size: 9.5pt;
+	color: #000;
+}
+
 .hero-links ul {
 	justify-content: center;
 	gap: 0;

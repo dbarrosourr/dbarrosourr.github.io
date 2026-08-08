@@ -1,0 +1,14 @@
+---
+import { cv } from '../data.js';
+import Section from './Section.astro';
+---
+
+<Section id="certificaciones" nav="Certificaciones" title="Certificaciones">
+	<ul class="cert-list" data-reveal>
+		{cv.certifications.map((c) => (
+			<li>
+				<span class="cert-name">{c.name}</span><span class="cert-year">{c.year}</span>
+			</li>
+		))}
+	</ul>
+</Section>

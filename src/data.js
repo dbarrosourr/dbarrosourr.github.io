@@ -15,10 +15,12 @@ export const cv = {
     // Ruta del PDF del CV en public/ (relativa a la base)
     cvUrl: 'CV-DanielBarroso.pdf',
     // Texto que se escribe con el efecto typing
-    role: 'Software Engineer',
+    role: 'Ingeniero de Software',
+    location: '04720 Almería, España',
     tagline:
-      'Ingeniero informático especializado en desarrollo FullStack y DevOps: aplicaciones web y móviles multiplataforma, Linux y microservicios con Docker.',
+      'Mi enfoque profesional se centra en el Desarrollo FullStack y DevOps, aprovechando mi amplio conocimiento en Linux, microservicios Docker e infraestructura como código.',
     links: [
+      { label: 'Teléfono', url: 'tel:+34626631587' },
       { label: 'GitHub', url: 'https://github.com/byMagg' },
       {
         label: 'LinkedIn',
@@ -29,44 +31,45 @@ export const cv = {
   },
 
   about: [
+    'Mi enfoque profesional se centra en el Desarrollo FullStack y DevOps: aprovecho mi amplio conocimiento en Linux, microservicios Docker e infraestructura como código para trabajar de punta a punta.',
     'Ingeniero informático por la Universidad de Almería, con máster en Tecnologías y Aplicaciones en Ingeniería Informática y más de dos años de experiencia desarrollando aplicaciones web y móviles.',
     'Trabajo de punta a punta: frontend con React, Flutter y React Native, backend con Node.js y Laravel, y despliegue en la nube con Docker, AWS y Google Cloud.',
-    'Me enfoco en el desarrollo FullStack y DevOps: me gusta entender el sistema completo, desde el píxel hasta la infraestructura, y automatizar todo lo repetible.',
+    'Me gusta entender el sistema completo, desde el píxel hasta la infraestructura, y automatizar todo lo repetible.',
     'Apasionado de la informática desde pequeño, me adapto rápido a nuevas tecnologías y me gusta construir productos multiplataforma que resuelvan problemas reales.',
   ],
 
   experience: [
     {
-      role: 'Software Developer',
+      role: 'Desarrollador de software',
       company: 'PrimeIT España',
-      location: 'Almería',
+      location: 'Remoto',
       period: '2024 — 2026',
       summary:
-        'Desarrollo de software para clientes de la consultora: aplicaciones web y móviles multiplataforma en proyectos FullStack.',
+        'Desarrollo de software para clientes de la consultora: aplicaciones web complejas y gestión de bases de datos en entornos ágiles.',
       achievements: [
-        'Participo en el desarrollo FullStack de aplicaciones para clientes, combinando frontend y backend en entornos ágiles.',
-        'Contribuyo a desplegar y mantener servicios en contenedores Docker sobre infraestructura cloud.',
-        'Colaboro en la definición técnica de nuevas funcionalidades con equipos multidisciplinares.',
+        'Desarrollo y mantenimiento de aplicaciones web complejas utilizando JavaScript.',
+        'Implementación y gestión de bases de datos MongoDB.',
+        'Colaboración estrecha con equipos multidisciplinares para implementar nuevas funcionalidades.',
       ],
     },
     {
-      role: 'Desarrollador Full-Stack',
-      company: 'AICOR Consultores Informáticos',
-      location: 'Córdoba',
-      period: 'Jul 2023 — May 2024',
+      role: 'Desarrollador fullstack',
+      company: 'Aicor Consultores S.L.',
+      location: 'Remoto',
+      period: '2023 — 2024',
       summary:
-        'Desarrollo web de alto rendimiento y aplicaciones móviles multiplataforma para distintos clientes de la consultora.',
+        'Diseño y gestión de aplicaciones web de alto rendimiento y proyectos de desarrollo móvil multiplataforma para distintos clientes de la consultora.',
       achievements: [
-        'Diseñé y gestioné aplicaciones web de alto rendimiento combinando React y Laravel, cuidando la experiencia de usuario.',
-        'Encabecé el desarrollo de aplicaciones móviles con React Native y Expo para ampliar la accesibilidad en múltiples plataformas.',
+        'Diseño y gestión de aplicaciones web de alto rendimiento, cuidando la experiencia de usuario.',
+        'Ejecución exitosa de proyectos de desarrollo de aplicaciones móviles.',
         'Desarrollé y mantuve sitios web dinámicos y escalables con WordPress para el Kit Digital, reforzando la presencia online de la empresa.',
       ],
     },
     {
-      role: 'Desarrollador Web',
-      company: 'Realtrack Systems SL',
+      role: 'Desarrollador web',
+      company: 'Realtrack Systems S.L.',
       location: 'Almería',
-      period: 'Jul 2020 — Mar 2021',
+      period: '2020 — 2021',
       summary:
         'Desarrollo web y gestión de infraestructura en un equipo pequeño de producto centrado en reportes deportivos.',
       achievements: [
@@ -115,25 +118,49 @@ export const cv = {
 
   skills: [
     {
-      category: 'Lenguajes',
+      category: 'Lenguajes de Programación',
       items: [
-        'JavaScript',
-        'TypeScript',
         'Java',
         'Kotlin',
+        'JavaScript',
+        'TypeScript',
         'Python',
+        'MySQL',
+        'PHP',
         'SQL',
         'Dart',
       ],
     },
     {
-      category: 'Frontend y Móvil',
+      category: 'Infraestructura',
+      items: [
+        'Linux',
+        'Amazon Web Services (AWS)',
+        'Google Cloud Platform (GCP)',
+        'Terraform',
+        'GitHub Actions',
+        'Docker',
+        'CI/CD',
+        'Microservicios',
+        'Kubernetes',
+        'Swagger',
+        'Jenkins',
+        'Cypress.io',
+        'OpenStack',
+        'Git',
+      ],
+    },
+    {
+      category: 'Frontend',
       items: [
         'React',
+        'HTML',
+        'CSS',
+        'Angular',
+        'Ionic',
         'React Native',
+        'Astro.js',
         'Flutter',
-        'Angular (Ionic)',
-        'HTML/CSS',
         'WordPress',
       ],
     },
@@ -142,43 +169,54 @@ export const cv = {
       items: [
         'Node.js',
         'Express',
-        'Laravel',
-        'REST APIs',
-        'MongoDB',
+        'Websockets',
+        'API REST',
+        'SpringBoot',
         'Firebase',
+        'Laravel',
       ],
     },
     {
-      category: 'DevOps y Herramientas',
-      items: [
-        'Linux',
-        'Docker',
-        'AWS',
-        'Google Cloud',
-        'CI/CD (GitHub Actions)',
-        'Git',
-      ],
+      category: 'Bases de Datos',
+      items: ['SQL', 'MongoDB', 'PostgreSQL'],
+    },
+    {
+      category: 'Idiomas',
+      items: ['Inglés B2 Cambridge — Competencia profesional de trabajo'],
+    },
+    {
+      category: 'Aptitudes',
+      items: ['Capacidad de análisis', 'Organización eficaz', 'Inteligencia emocional'],
+    },
+    {
+      category: 'IA',
+      items: ['Claude Code', 'OpenClaw', 'ChatGPT'],
     },
   ],
 
   education: [
     {
+      type: 'Programa',
+      degree: 'Cloud Computing AWS (565 horas + Certificación)',
+      institution: 'Fundación Generation Spain · Escuela de Organización Industrial (EOI)',
+      period: '2026',
+    },
+    {
       type: 'Máster',
       degree:
-        'Tecnologías y Aplicaciones en Ingeniería Informática · TFM: periférico con infrarrojos',
+        'Tecnologías y Aplicaciones en Ingeniería Informática, Desarrollo Web/Móvil',
       institution: 'Universidad de Almería',
-      period: '2021 — 2025',
+      period: '2021 — 2023',
     },
     {
       type: 'Grado',
-      degree:
-        'Ingeniería Informática · TFG: visualización de mercados de criptodivisas con Flutter',
+      degree: 'Ingeniería Informática',
       institution: 'Universidad de Almería',
-      period: '2016 — 2021',
+      period: '2016 — 2020',
     },
   ],
   certifications: [
-    { name: 'AWS Certified Cloud Practitioner', year: '2026' },
+    { name: 'AWS Certified Cloud Practitioner (CLF-C02)', year: '2026' },
     { name: 'AWS re/Start', year: '2026' },
     {
       name: 'Google Cloud · Essential Infrastructure (Coursera)',

@@ -3,7 +3,7 @@ import { cv } from '../data.js';
 import Section from './Section.astro';
 ---
 
-<Section id="educacion" nav="Educación" title="Educación y certificaciones">
+<Section id="educacion" nav="Educación" title="Educación">
 	<div class="edu-grid">
 		{cv.education.map((e) => (
 			<div class="edu-item" data-reveal>
@@ -14,15 +14,5 @@ import Section from './Section.astro';
 				<p class="edu-period">{e.period}</p>
 			</div>
 		))}
-		<div class="edu-item edu-item--certs" data-reveal>
-			<h3 class="edu-degree">Certificaciones</h3>
-			<ul class="cert-list">
-				{cv.certifications.map((c) => (
-					<li>
-						<span class="cert-name">{c.name}</span><span class="cert-year">{c.year}</span>
-					</li>
-				))}
-			</ul>
-		</div>
 	</div>
 </Section>
