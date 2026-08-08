@@ -684,7 +684,21 @@ html.js [data-reveal].in-view {
 		display: none;
 	}
 
-	.btn--palette .btn-label {
+	.topbar-actions {
+		gap: 0.35rem;
+	}
+
+	.topbar .btn {
+		justify-content: center;
+		width: 2.25rem;
+		height: 2.25rem;
+		padding: 0;
+		gap: 0;
+		font-size: 0.8rem;
+	}
+
+	.topbar .btn-label,
+	.topbar kbd {
 		display: none;
 	}
 

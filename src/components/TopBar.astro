@@ -13,6 +13,7 @@ import { cv } from '../data.js'
       class="btn btn--ghost"
       type="button"
       aria-pressed="false"
+      aria-label="Cambiar tema"
     >
       <span aria-hidden="true">◐</span><span class="btn-label">Tema</span>
     </button>
@@ -20,9 +21,17 @@ import { cv } from '../data.js'
       id="print-btn"
       class="btn btn--ghost"
       href={import.meta.env.BASE_URL + cv.profile.cvUrl}
-      download="CV-DanielBarroso.pdf">Descargar CV</a
+      download="CV-DanielBarroso.pdf"
+      aria-label="Descargar CV"
     >
-    <button id="palette-btn" class="btn btn--ghost btn--palette" type="button">
+      <span aria-hidden="true">⬇</span><span class="btn-label">Descargar CV</span>
+    </a>
+    <button
+      id="palette-btn"
+      class="btn btn--ghost btn--palette"
+      type="button"
+      aria-label="Buscar"
+    >
       <span aria-hidden="true">⌘</span><span class="btn-label">Buscar</span><kbd
         >Ctrl K</kbd
       >
