@@ -1,0 +1,19 @@
+---
+import { cv } from '../data.js';
+import Section from './Section.astro';
+---
+
+<Section id="proyectos" nav="Proyectos" title="Proyectos destacados">
+	{cv.projects.map((p) => (
+		<article class="project" data-reveal>
+			<h3 class="project-name">{p.name}</h3>
+			<p class="project-desc">{p.description}</p>
+			<p class="project-stack" aria-label="Stack tecnológico">
+				{p.stack.map((s) => <span class="chip">{s}</span>)}
+			</p>
+			<p class="project-result">
+				<strong>Resultado:</strong> {p.result}
+			</p>
+		</article>
+	))}
+</Section>

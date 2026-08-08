@@ -1,0 +1,159 @@
+---
+---
+
+<dialog id="palette" class="palette" aria-label="Navegación rápida">
+	<div class="palette-box">
+		<label class="palette-search" for="palette-input">
+			<span class="prompt" aria-hidden="true">›</span>
+			<input
+				id="palette-input"
+				type="text"
+				placeholder="Escribe para filtrar…"
+				autocomplete="off"
+				spellcheck="false"
+				aria-label="Buscar sección o acción"
+				aria-autocomplete="list"
+				aria-controls="palette-list"
+				aria-activedescendant=""
+			/>
+		</label>
+		<ul id="palette-list" class="palette-list" role="listbox" aria-label="Resultados de búsqueda"></ul>
+	</div>
+</dialog>
+
+<script>
+	const dialog = document.getElementById('palette');
+	const input = document.getElementById('palette-input');
+	const list = document.getElementById('palette-list');
+	const paletteBtn = document.getElementById('palette-btn');
+	const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const scroll = (options) => (reduced ? { ...options, behavior: 'auto' } : options);
+
+	const sectionItems = Array.from(document.querySelectorAll('[data-nav]')).map((el) => ({
+		label: el.dataset.nav,
+		tag: 'sección',
+		run: () => {
+			el.scrollIntoView(scroll({ block: 'start' }));
+			el.focus({ preventScroll: true });
+		},
+	}));
+
+	const themeToggle = document.getElementById('theme-toggle');
+	const toggleTheme = () => {
+		const root = document.documentElement;
+		root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+		localStorage.setItem('theme', root.dataset.theme);
+		themeToggle?.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+	};
+
+	const actionItems = [
+		{ label: 'Descargar CV (PDF)', tag: 'acción', run: () => document.getElementById('print-btn')?.click() },
+		{ label: 'Alternar tema', tag: 'acción', run: toggleTheme },
+	];
+
+	let currentItems = [];
+	let selected = 0;
+	let lastFocused = null;
+
+	const matches = (query, item) => {
+		const q = query.trim().toLowerCase();
+		return !q || item.label.toLowerCase().includes(q) || item.tag.toLowerCase().includes(q);
+	};
+
+	const render = (items) => {
+		currentItems = items;
+		selected = 0;
+		list.innerHTML = '';
+
+		if (!items.length) {
+			const empty = document.createElement('li');
+			empty.className = 'palette-empty';
+			empty.textContent = 'Sin resultados';
+			list.appendChild(empty);
+			return;
+		}
+
+		items.forEach((item, i) => {
+			const li = document.createElement('li');
+			li.id = `palette-item-${i}`;
+			li.className = 'palette-item';
+			li.setAttribute('role', 'option');
+			li.setAttribute('aria-selected', 'false');
+
+			const label = document.createElement('span');
+			label.className = 'palette-item-label';
+			label.textContent = item.label;
+
+			const tag = document.createElement('span');
+			tag.className = 'palette-item-tag';
+			tag.textContent = item.tag;
+
+			li.append(label, tag);
+			li.addEventListener('click', () => run(item));
+			list.appendChild(li);
+		});
+
+		updateSelected();
+	};
+
+	const updateSelected = () => {
+		list.querySelectorAll('.palette-item').forEach((li, i) => {
+			li.setAttribute('aria-selected', String(i === selected));
+			if (i === selected) li.scrollIntoView({ block: 'nearest' });
+		});
+		input.setAttribute('aria-activedescendant', currentItems[selected] ? `palette-item-${selected}` : '');
+	};
+
+	const run = (item) => {
+		dialog.close();
+		item.run();
+	};
+
+	const openPalette = () => {
+		if (dialog.open) return;
+		lastFocused = document.activeElement;
+		render(sectionItems.concat(actionItems));
+		input.value = '';
+		dialog.showModal();
+		input.focus();
+	};
+
+	const closePalette = () => {
+		if (dialog.open) dialog.close();
+	};
+
+	paletteBtn?.addEventListener('click', openPalette);
+
+	document.addEventListener('keydown', (e) => {
+		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+			e.preventDefault();
+			dialog.open ? closePalette() : openPalette();
+		}
+	});
+
+	dialog?.addEventListener('close', () => lastFocused?.focus());
+	dialog?.addEventListener('click', (e) => {
+		if (e.target === dialog) closePalette();
+	});
+
+	input?.addEventListener('input', () => {
+		render(sectionItems.concat(actionItems).filter((item) => matches(input.value, item)));
+	});
+
+	input?.addEventListener('keydown', (e) => {
+		if (!currentItems.length) return;
+
+		if (e.key === 'ArrowDown') {
+			e.preventDefault();
+			selected = (selected + 1) % currentItems.length;
+			updateSelected();
+		} else if (e.key === 'ArrowUp') {
+			e.preventDefault();
+			selected = (selected - 1 + currentItems.length) % currentItems.length;
+			updateSelected();
+		} else if (e.key === 'Enter') {
+			e.preventDefault();
+			run(currentItems[selected]);
+		}
+	});
+</script>

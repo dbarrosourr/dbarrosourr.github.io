@@ -1,0 +1,49 @@
+---
+import { cv } from '../data.js';
+const links = cv.profile.links;
+const externalAttrs = (url) => (url.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' });
+---
+
+<header id="cabecera" class="hero" data-nav="Inicio" tabindex="-1">
+	<p class="term" aria-hidden="true"><span class="prompt">$</span> whoami</p>
+	<h1 class="hero-name">{cv.profile.name}</h1>
+	<p class="term term--out" aria-hidden="true"><span class="prompt">$</span> cat role.txt</p>
+	<p class="hero-role" id="typed-role">
+		<span class="role-text">{cv.profile.role}</span><span class="caret" aria-hidden="true"></span>
+	</p>
+	<p class="tagline">{cv.profile.tagline}</p>
+	<nav class="hero-links" aria-label="Enlaces de contacto">
+		<ul>
+			{links.map((l) => (
+				<li>
+					<a class="link" href={l.url} {...externalAttrs(l.url)}>
+						<span class="link-label">{l.label}</span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+</header>
+
+<script>
+	const roleEl = document.getElementById('typed-role');
+
+	if (roleEl && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		const textEl = roleEl.querySelector('.role-text');
+		const original = textEl.textContent;
+
+		textEl.textContent = '';
+		roleEl.classList.add('is-typing');
+		let i = 0;
+		const type = () => {
+			if (i < original.length) {
+				textEl.textContent = original.slice(0, i + 1);
+				i += 1;
+				setTimeout(type, 40);
+			} else {
+				roleEl.classList.remove('is-typing');
+			}
+		};
+		type();
+	}
+</script>

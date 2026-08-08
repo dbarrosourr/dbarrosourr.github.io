@@ -1,0 +1,12 @@
+---
+const id = Astro.props.id;
+const nav = Astro.props.nav;
+const title = Astro.props.title;
+---
+
+<section id={id} class="section" data-nav={nav} tabindex="-1">
+	<h2 class="section-title">
+		<span class="comment" aria-hidden="true">//</span> {title}
+	</h2>
+	<slot />
+</section>

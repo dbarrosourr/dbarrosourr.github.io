@@ -1,0 +1,17 @@
+---
+import { cv } from '../data.js';
+import Section from './Section.astro';
+---
+
+<Section id="skills" nav="Skills" title="Skills">
+	<div class="skills-grid">
+		{cv.skills.map((g) => (
+			<div class="skill-group" data-reveal>
+				<h3 class="skill-category">{g.category}</h3>
+				<ul class="skill-items">
+					{g.items.map((s) => <li>{s}</li>)}
+				</ul>
+			</div>
+		))}
+	</div>
+</Section>

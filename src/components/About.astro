@@ -1,0 +1,10 @@
+---
+import { cv } from '../data.js';
+import Section from './Section.astro';
+---
+
+<Section id="sobre-mi" nav="Sobre mí" title="Sobre mí">
+	<div class="prose">
+		{cv.about.map((p) => <p>{p}</p>)}
+	</div>
+</Section>

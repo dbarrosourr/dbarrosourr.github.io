@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 · No encontrado">
+	<section class="section" tabindex="-1">
+		<h2 class="section-title"><span class="comment" aria-hidden="true">//</span> 404</h2>
+		<p class="prose">
+			<span class="term" aria-hidden="true"><span class="prompt">$</span> ls ./pagina</span>
+			<br />
+			ls: no existe el fichero o el directorio. <a href={import.meta.env.BASE_URL}>Vuelve al inicio</a>.
+		</p>
+	</section>
+</BaseLayout>

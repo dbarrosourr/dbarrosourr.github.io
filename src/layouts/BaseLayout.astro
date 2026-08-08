@@ -1,0 +1,71 @@
+---
+import { cv } from '../data.js';
+import '../styles.css';
+import printUrl from '../print.css?url';
+import TopBar from '../components/TopBar.astro';
+import Footer from '../components/Footer.astro';
+import CommandPalette from '../components/CommandPalette.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = cv.meta.title, description = cv.meta.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={cv.meta.lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+		<link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + 'favicon.svg'} />
+		<link rel="stylesheet" href={printUrl} media="print" />
+		<title>{title}</title>
+		<script is:inline>
+			// Evita parpadeo de tema antes del primer pintado
+			try {
+				const saved = localStorage.getItem('theme');
+				const theme = saved ?? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+				document.documentElement.dataset.theme = theme;
+			} catch {
+				/* sin almacenamiento: el tema por defecto lo aplica CSS */
+			}
+		</script>
+	</head>
+	<body>
+		<a class="skip-link" href="#contenido">Saltar al contenido</a>
+		<TopBar />
+		<main id="contenido">
+			<slot />
+		</main>
+		<Footer />
+		<CommandPalette />
+
+		<script>
+			// Aparición al hacer scroll
+			document.documentElement.classList.add('js');
+
+			if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('in-view');
+								observer.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.1 }
+				);
+				document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+			} else {
+				document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('in-view'));
+			}
+		</script>
+	</body>
+</html>

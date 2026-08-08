@@ -1,0 +1,22 @@
+---
+import { cv } from '../data.js';
+import Section from './Section.astro';
+---
+
+<Section id="experiencia" nav="Experiencia" title="Experiencia">
+	{cv.experience.map((job) => (
+		<article class="job" data-reveal>
+			<header class="job-head">
+				<h3 class="job-role">{job.role}</h3>
+				<p class="job-meta">
+					<span class="job-company">{job.company}</span>
+					<span class="job-period">{job.period}</span>
+				</p>
+			</header>
+			<p class="job-summary">{job.summary}</p>
+			<ul class="job-achievements">
+				{job.achievements.map((a) => <li>{a}</li>)}
+			</ul>
+		</article>
+	))}
+</Section>
