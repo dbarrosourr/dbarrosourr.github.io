@@ -6,7 +6,15 @@ import Section from './Section.astro';
 <Section id="certificaciones" nav="Certificaciones" title="Certificaciones">
 	<ul class="cert-list" data-reveal>
 		{cv.certifications.map((c) => (
-			<li>
+			<li class="cert-item">
+				{c.logo && (
+					<img
+						class="cert-logo"
+						src={import.meta.env.BASE_URL + c.logo}
+						alt={c.name}
+						loading="lazy"
+					/>
+				)}
 				<span class="cert-name">{c.name}</span><span class="cert-year">{c.year}</span>
 			</li>
 		))}

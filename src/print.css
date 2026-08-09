@@ -157,6 +157,12 @@ main {
 	break-inside: avoid;
 }
 
+/* Imágenes decorativas (proyectos y certificaciones) fuera del CV impreso */
+.project-media,
+.cert-logo {
+	display: none;
+}
+
 .skill-group,
 .edu-item {
 	margin-bottom: 0;
