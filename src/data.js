@@ -32,7 +32,7 @@ export const cv = {
 
   about: [
     'Mi enfoque profesional se centra en el Desarrollo FullStack y DevOps: aprovecho mi amplio conocimiento en Linux, microservicios Docker e infraestructura como código para trabajar de punta a punta.',
-    'Ingeniero informático por la Universidad de Almería, con máster en Tecnologías y Aplicaciones en Ingeniería Informática y más de dos años de experiencia desarrollando aplicaciones web y móviles.',
+    'Ingeniero informático por la Universidad de Almería, con máster en Tecnologías y Aplicaciones en Ingeniería Informática y tres años de experiencia desarrollando aplicaciones web y móviles.',
     'Trabajo de punta a punta: frontend con React, Flutter y React Native, backend con Node.js y Laravel, y despliegue en la nube con Docker, AWS y Google Cloud.',
     'Me gusta entender el sistema completo, desde el píxel hasta la infraestructura, y automatizar todo lo repetible.',
     'Apasionado de la informática desde pequeño, me adapto rápido a nuevas tecnologías y me gusta construir productos multiplataforma que resuelvan problemas reales.',
@@ -186,7 +186,11 @@ export const cv = {
     },
     {
       category: 'Aptitudes',
-      items: ['Capacidad de análisis', 'Organización eficaz', 'Inteligencia emocional'],
+      items: [
+        'Capacidad de análisis',
+        'Organización eficaz',
+        'Inteligencia emocional',
+      ],
     },
     {
       category: 'IA',
@@ -198,7 +202,8 @@ export const cv = {
     {
       type: 'Programa',
       degree: 'Cloud Computing AWS (565 horas + Certificación)',
-      institution: 'Fundación Generation Spain · Escuela de Organización Industrial (EOI)',
+      institution:
+        'Fundación Generation Spain · Escuela de Organización Industrial (EOI)',
       period: '2026',
     },
     {
