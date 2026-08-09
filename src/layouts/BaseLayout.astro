@@ -30,7 +30,7 @@ const { title = cv.meta.title, description = cv.meta.description } = Astro.props
 			// Evita parpadeo de tema antes del primer pintado
 			try {
 				const saved = localStorage.getItem('theme');
-				const theme = saved ?? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+				const theme = saved ?? 'dark';
 				document.documentElement.dataset.theme = theme;
 			} catch {
 				/* sin almacenamiento: el tema por defecto lo aplica CSS */
