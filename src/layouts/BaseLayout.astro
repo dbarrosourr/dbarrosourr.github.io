@@ -1,7 +1,6 @@
 ---
 import { cv } from '../data.js';
 import '../styles.css';
-import printUrl from '../print.css?url';
 import TopBar from '../components/TopBar.astro';
 import Footer from '../components/Footer.astro';
 import CommandPalette from '../components/CommandPalette.astro';
@@ -24,7 +23,6 @@ const { title = cv.meta.title, description = cv.meta.description } = Astro.props
 		<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
 		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 		<link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + 'favicon.svg'} />
-		<link rel="stylesheet" href={printUrl} media="print" />
 		<title>{title}</title>
 		<script is:inline>
 			// Evita parpadeo de tema antes del primer pintado

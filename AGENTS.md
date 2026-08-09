@@ -15,7 +15,6 @@ Single-page CV (in Spanish) for Daniel Barroso Urrutia with a terminal/code-edit
 - `src/pages/index.astro` mounts the section components inside `src/layouts/BaseLayout.astro`, which provides `<head>`, the no-flash theme preload, skip-link, and the scroll-reveal script.
 - One component per section in `src/components/`: `Hero`, `About`, `Experience`, `Projects`, `Skills`, `Education`, plus `TopBar`, `Footer`, `CommandPalette`, and `Section` (a wrapper that adds `id`, `data-nav`, and `tabindex="-1"`).
 - The only `.js` file in `src/` is `data.js`. All other JS is colocated `<script>` inside `.astro` components (Astro bundles them per component). The single `is:inline` script is the theme preload in `BaseLayout`'s `<head>` — keep it inline to avoid a theme flash.
-- `src/print.css` is loaded via `?url` with `media="print"` so printing/PDF produces a classic CV.
 
 ## Conventions and gotchas
 
