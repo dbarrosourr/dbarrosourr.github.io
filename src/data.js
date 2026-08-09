@@ -121,7 +121,15 @@ export const cv = {
       images: ['img/portfolio.jpg'],
       description:
         'CV de una sola página con estética de terminal/editor de código, generado estáticamente con Astro y sin dependencias frontend de terceros.',
-      stack: ['Astro', 'JavaScript', 'CSS', 'HTML', 'OpenCode (IA)'],
+      stack: [
+        'Astro',
+        'JavaScript',
+        'CSS',
+        'HTML',
+        'GitHub Actions',
+        'GitHub Pages',
+        'OpenCode',
+      ],
       result:
         'Sitio rápido, accesible y con modo oscuro, desarrollado en pareja con la IA de OpenCode como asistente de programación: mayor productividad, mejores prácticas y flujo de trabajo moderno, sin llamadas externas ni dependencias de terceros.',
     },
