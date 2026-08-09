@@ -634,15 +634,28 @@ main {
 /* ------------------------------------------------------------------ */
 .page-foot {
 	margin-top: 4rem;
-	padding-top: 1.25rem;
+	padding-block: 1.25rem;
 	border-top: 1px solid var(--border);
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap;
 	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
 	font-size: 0.85rem;
+	line-height: 1.5;
 	color: var(--fg-muted);
+}
+
+.page-foot p {
+	line-height: inherit;
+	margin: 0;
+}
+
+.page-foot .term {
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	line-height: inherit;
 }
 
 /* ------------------------------------------------------------------ */
