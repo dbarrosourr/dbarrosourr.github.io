@@ -459,14 +459,25 @@ main {
 }
 
 .project-media {
-	margin: 0 0 0.8rem;
+	display: flex;
+	gap: 0.4rem;
+	max-width: 460px;
+	margin: 0 auto 0.8rem;
+}
+
+.project-media figure {
+	flex: 1 1 0;
+	min-width: 0;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 8px;
 }
 
 .project-media img {
 	display: block;
 	width: 100%;
 	height: auto;
-	border-radius: 8px;
+	object-fit: contain;
 }
 
 .project-name {
@@ -781,5 +792,11 @@ html.js [data-reveal].in-view {
 	.job-head {
 		flex-direction: column;
 		gap: 0.1rem;
+	}
+
+	.project-media {
+		max-width: none;
+		margin-right: 0;
+		margin-left: 0;
 	}
 }

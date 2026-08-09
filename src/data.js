@@ -83,7 +83,7 @@ export const cv = {
   projects: [
     {
       name: 'Monitor de criptodivisas con Flutter',
-      // Opcional: image: 'ruta-en-public/...'
+      images: ['img/tradingbot_1.jpg', 'img/tradingbot_2.jpg'],
       description:
         'Aplicación móvil para visualizar y monitorizar mercados de criptomonedas usando la API de Coinbase Pro. Trabajo de Fin de Grado.',
       stack: ['Flutter', 'Coinbase Pro API', 'Dart'],
@@ -92,6 +92,7 @@ export const cv = {
     },
     {
       name: 'Spotify API + CI/CD',
+      images: ['img/hightracks.jpg'],
       description:
         'Aplicación para buscar, insertar y valorar canciones desde la API de Spotify, con recomendaciones basadas en GPT-3.5.',
       stack: [
@@ -114,6 +115,15 @@ export const cv = {
       stack: ['Node.js', 'AWS Lambda', 'CloudWatch'],
       result:
         'Mejoró la comunicación con los usuarios y la difusión de información relevante mediante alertas automáticas y escalables.',
+    },
+    {
+      name: 'Portfolio personal con Astro',
+      images: ['img/portfolio.jpg'],
+      description:
+        'CV de una sola página con estética de terminal/editor de código, generado estáticamente con Astro y sin dependencias frontend de terceros.',
+      stack: ['Astro', 'JavaScript', 'CSS', 'HTML', 'OpenCode (IA)'],
+      result:
+        'Sitio rápido, accesible y con modo oscuro, desarrollado en pareja con la IA de OpenCode como asistente de programación: mayor productividad, mejores prácticas y flujo de trabajo moderno, sin llamadas externas ni dependencias de terceros.',
     },
   ],
 
