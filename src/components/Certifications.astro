@@ -1,6 +1,7 @@
 ---
 import { cv } from '../data.js';
 import Section from './Section.astro';
+import Icon from './Icon.astro';
 ---
 
 <Section id="certificaciones" nav="Certificaciones" title="Certificaciones">
@@ -15,7 +16,17 @@ import Section from './Section.astro';
 						loading="lazy"
 					/>
 				)}
-				<span class="cert-name">{c.name}</span><span class="cert-year">{c.year}</span>
+				<span class="cert-name">
+					{c.url ? (
+						<a class="cert-verify" href={c.url} target="_blank" rel="noopener noreferrer">
+							{c.name}
+							<Icon name="external" />
+						</a>
+					) : (
+						c.name
+					)}
+				</span>
+				<span class="cert-year">{c.year}</span>
 			</li>
 		))}
 	</ul>

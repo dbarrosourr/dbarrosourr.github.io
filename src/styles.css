@@ -584,14 +584,33 @@ main {
 	height: 2.4rem;
 	object-fit: contain;
 	flex: none;
-	background: #fff;
-	border: 1px solid var(--border);
 	border-radius: 6px;
-	padding: 0.25rem;
 }
 
 .cert-name {
 	flex: 1;
+}
+
+.cert-name a {
+	color: var(--fg);
+	text-decoration: none;
+	border-bottom: 1px dashed var(--border);
+}
+
+.cert-name a:hover {
+	border-bottom-color: var(--fg);
+}
+
+.cert-verify {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.cert-verify svg {
+	width: 0.9em;
+	height: 0.9em;
+	flex: none;
 }
 
 .cert-year {

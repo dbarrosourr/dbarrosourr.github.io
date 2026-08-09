@@ -222,13 +222,35 @@ export const cv = {
     },
   ],
   certifications: [
-    { name: 'AWS Certified Cloud Practitioner (CLF-C02)', year: '2026' },
-    { name: 'AWS re/Start', year: '2026' },
     {
-      name: 'Google Cloud · Essential Infrastructure (Coursera)',
-      year: '2023',
+      name: 'AWS Certified Cloud Practitioner (CLF-C02)',
+      year: '2026',
+      logo: 'logos/aws.jpg',
+      url: 'https://www.credly.com/badges/e14d8037-86da-4230-aacc-ddb0fd78104d/linked_in_profile',
     },
-    { name: 'Introducción al Hacking Ético (Mastermind)', year: '2021' },
-    { name: 'First Certificate in English (Cambridge)', year: '' },
+    {
+      name: 'AWS re/Start',
+      year: '2026',
+      logo: 'logos/aws.jpg',
+      url: 'https://www.credly.com/badges/f35d26fd-ee2d-4305-8ee6-faf2902afe89/linked_in_profile',
+    },
+    {
+      name: 'Google Cloud · Essential Infrastructure',
+      year: '2023',
+      logo: 'logos/coursera.jpg',
+      url: 'https://www.coursera.org/account/accomplishments/verify/DLV5C3LNPTEV',
+    },
+    {
+      name: 'Introducción al Hacking Ético (Mastermind)',
+      year: '2021',
+      logo: 'logos/mastermind.jpg',
+      url: '',
+    },
+    {
+      name: 'First Certificate in English (Cambridge)',
+      year: '',
+      logo: 'logos/cambridge.jpg',
+      url: '',
+    },
   ],
 }
