@@ -1,5 +1,6 @@
 ---
 import { cv } from '../data.js'
+import Icon from './Icon.astro'
 ---
 
 <header class="topbar">
@@ -15,7 +16,7 @@ import { cv } from '../data.js'
       aria-pressed="false"
       aria-label="Cambiar tema"
     >
-      <span aria-hidden="true">◐</span><span class="btn-label">Tema</span>
+      <Icon name="theme" /><span class="btn-label">Tema</span>
     </button>
     <a
       id="print-btn"
@@ -24,7 +25,7 @@ import { cv } from '../data.js'
       download="CV-DanielBarroso.pdf"
       aria-label="Descargar CV"
     >
-      <span aria-hidden="true">⬇</span><span class="btn-label">Descargar CV</span>
+      <Icon name="download" /><span class="btn-label">Descargar CV</span>
     </a>
     <button
       id="palette-btn"
@@ -32,7 +33,7 @@ import { cv } from '../data.js'
       type="button"
       aria-label="Buscar"
     >
-      <span aria-hidden="true">⌘</span><span class="btn-label">Buscar</span><kbd
+      <Icon name="search" /><span class="btn-label">Buscar</span><kbd
         >Ctrl K</kbd
       >
     </button>
