@@ -83,6 +83,7 @@ export const cv = {
   projects: [
     {
       name: 'Monitor de criptodivisas con Flutter',
+      // Opcional: image: 'ruta-en-public/...'
       description:
         'Aplicación móvil para visualizar y monitorizar mercados de criptomonedas usando la API de Coinbase Pro. Trabajo de Fin de Grado.',
       stack: ['Flutter', 'Coinbase Pro API', 'Dart'],
@@ -194,7 +195,7 @@ export const cv = {
     },
     {
       category: 'IA',
-      items: ['Claude Code', 'OpenClaw', 'ChatGPT'],
+      items: ['ClaudeCode', 'OpenCode', 'ChatGPT'],
     },
   ],
 
