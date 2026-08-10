@@ -9,13 +9,19 @@ import Section from './Section.astro';
 			{p.images?.length && (
 				<div class="project-media">
 					{p.images.map((img) => (
-						<figure>
+						<div class="project-window">
+							<div class="window-bar" aria-hidden="true">
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="window-file">{img.split('/').pop()}</span>
+							</div>
 							<img
 								src={import.meta.env.BASE_URL + img}
 								alt={p.name}
 								loading="lazy"
 							/>
-						</figure>
+						</div>
 					))}
 				</div>
 			)}

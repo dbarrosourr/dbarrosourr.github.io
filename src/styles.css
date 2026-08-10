@@ -465,15 +465,47 @@ main {
 	margin: 0 auto 0.8rem;
 }
 
-.project-media figure {
+.project-window {
 	flex: 1 1 0;
 	min-width: 0;
 	background: var(--bg);
 	border: 1px solid var(--border);
 	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: var(--shadow);
 }
 
-.project-media img {
+.window-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.4rem 0.6rem;
+	background: var(--bg-soft);
+	border-bottom: 1px solid var(--border);
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.72rem;
+	color: var(--fg-muted);
+}
+
+.window-bar .dot {
+	width: 0.65rem;
+	height: 0.65rem;
+	border-radius: 50%;
+	flex: none;
+}
+
+.window-bar .dot:nth-child(1) { background: #ff5f56; }
+.window-bar .dot:nth-child(2) { background: #ffbd2e; }
+.window-bar .dot:nth-child(3) { background: #27c93f; }
+
+.window-file {
+	margin-left: 0.2rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.project-window img {
 	display: block;
 	width: 100%;
 	height: auto;
