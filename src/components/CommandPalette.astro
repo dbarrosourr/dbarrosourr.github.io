@@ -131,7 +131,7 @@
 		}
 	});
 
-	dialog?.addEventListener('close', () => lastFocused?.focus());
+	dialog?.addEventListener('close', () => lastFocused?.focus({ preventScroll: true }));
 	dialog?.addEventListener('click', (e) => {
 		if (e.target === dialog) closePalette();
 	});
