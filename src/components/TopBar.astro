@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL
   <p class="topbar-title">{cv.profile.alias}.ts — {t.topbar.title}</p>
   <div class="topbar-actions">
     <nav class="lang-switcher" aria-label={t.topbar.langLabel}>
-      <a class="lang-link" href={base + 'es/'} data-astro-reload aria-current={locale === 'es' ? 'true' : undefined} lang="es">ES</a>
+      <a class="lang-link" href={base} data-astro-reload aria-current={locale === 'es' ? 'true' : undefined} lang="es">ES</a>
       <span class="lang-sep" aria-hidden="true">/</span>
       <a class="lang-link" href={base + 'en/'} data-astro-reload aria-current={locale === 'en' ? 'true' : undefined} lang="en">EN</a>
     </nav>
