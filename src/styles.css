@@ -667,6 +667,7 @@ main {
 .page-foot {
 	margin-top: 4rem;
 	padding-block: 1.25rem;
+	padding-inline: 1.25rem;
 	border-top: 1px solid var(--border);
 	display: flex;
 	align-items: center;
