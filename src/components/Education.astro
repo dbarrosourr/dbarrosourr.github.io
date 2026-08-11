@@ -1,9 +1,11 @@
 ---
-import { cv } from '../data.js';
+import { getCv } from '../i18n/index.js';
 import Section from './Section.astro';
+
+const cv = getCv(Astro.currentLocale ?? 'es');
 ---
 
-<Section id="educacion" nav="Educación" title="Educación">
+<Section id="educacion" nav={cv.sections.education.nav} title={cv.sections.education.title}>
 	<div class="edu-grid">
 		{cv.education.map((e) => (
 			<div class="edu-item" data-reveal>

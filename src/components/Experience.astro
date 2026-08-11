@@ -1,9 +1,11 @@
 ---
-import { cv } from '../data.js';
+import { getCv } from '../i18n/index.js';
 import Section from './Section.astro';
+
+const cv = getCv(Astro.currentLocale ?? 'es');
 ---
 
-<Section id="experiencia" nav="Experiencia" title="Experiencia">
+<Section id="experiencia" nav={cv.sections.experience.nav} title={cv.sections.experience.title}>
 	{cv.experience.map((job) => (
 		<article class="job" data-reveal>
 			<header class="job-head">

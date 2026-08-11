@@ -1,10 +1,12 @@
 ---
-import { cv } from '../data.js';
+import { getCv } from '../i18n/index.js';
 import Section from './Section.astro';
 import Icon from './Icon.astro';
+
+const cv = getCv(Astro.currentLocale ?? 'es');
 ---
 
-<Section id="certificaciones" nav="Certificaciones" title="Certificaciones">
+<Section id="certificaciones" nav={cv.sections.certifications.nav} title={cv.sections.certifications.title}>
 	<ul class="cert-list" data-reveal>
 		{cv.certifications.map((c) => (
 			<li class="cert-item">

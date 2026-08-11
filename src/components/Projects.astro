@@ -1,9 +1,13 @@
 ---
-import { cv } from '../data.js';
+import { getCv, getUi } from '../i18n/index.js';
 import Section from './Section.astro';
+
+const locale = Astro.currentLocale ?? 'es';
+const cv = getCv(locale);
+const t = getUi(locale);
 ---
 
-<Section id="proyectos" nav="Proyectos" title="Proyectos destacados">
+<Section id="proyectos" nav={cv.sections.projects.nav} title={cv.sections.projects.title}>
 	{cv.projects.map((p) => (
 		<article class="project" data-reveal>
 			{p.images?.length && (
@@ -27,11 +31,11 @@ import Section from './Section.astro';
 			)}
 			<h3 class="project-name">{p.name}</h3>
 			<p class="project-desc">{p.description}</p>
-			<p class="project-stack" aria-label="Stack tecnológico">
+			<p class="project-stack" aria-label={t.projects.stack}>
 				{p.stack.map((s) => <span class="chip">{s}</span>)}
 			</p>
 			<p class="project-result">
-				<strong>Resultado:</strong> {p.result}
+				<strong>{t.projects.result}:</strong> {p.result}
 			</p>
 		</article>
 	))}

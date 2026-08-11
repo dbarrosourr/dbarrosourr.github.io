@@ -8,12 +8,23 @@ export const cv = {
       'CV de Daniel Barroso Urrutia, Software Engineer. Desarrollo FullStack y móvil: React, Flutter, React Native, Node.js y Docker.',
   },
 
+  // Etiquetas de navegación y títulos de sección, localizados
+  sections: {
+    hero: { nav: 'Inicio', title: 'Inicio' },
+    about: { nav: 'Sobre mí', title: 'Sobre mí' },
+    experience: { nav: 'Experiencia', title: 'Experiencia' },
+    projects: { nav: 'Proyectos', title: 'Proyectos destacados' },
+    skills: { nav: 'Skills', title: 'Skills' },
+    education: { nav: 'Educación', title: 'Educación' },
+    certifications: { nav: 'Certificaciones', title: 'Certificaciones' },
+  },
+
   profile: {
     name: 'Daniel Barroso Urrutia',
     // Salida de `$ whoami`
     alias: 'dbarroso',
     // Ruta del PDF del CV en public/ (relativa a la base)
-    cvUrl: 'CV-DanielBarroso.pdf',
+    cvUrl: 'es/CV-DanielBarroso.pdf',
     // Texto que se escribe con el efecto typing
     role: 'Ingeniero de Software',
     location: '04720 Almería, España',

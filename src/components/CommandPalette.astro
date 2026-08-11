@@ -1,23 +1,35 @@
 ---
+import { getUi } from '../i18n/index.js';
+
+const t = getUi(Astro.currentLocale ?? 'es');
 ---
 
-<dialog id="palette" class="palette" aria-label="Navegación rápida">
+<dialog
+	id="palette"
+	class="palette"
+	aria-label={t.palette.searchLabel}
+	data-empty={t.palette.empty}
+	data-section={t.palette.section}
+	data-action={t.palette.action}
+	data-download-cv={t.palette.downloadCv}
+	data-toggle-theme={t.palette.toggleTheme}
+>
 	<div class="palette-box">
 		<label class="palette-search" for="palette-input">
 			<span class="prompt" aria-hidden="true">›</span>
 			<input
 				id="palette-input"
 				type="text"
-				placeholder="Escribe para filtrar…"
+				placeholder={t.palette.placeholder}
 				autocomplete="off"
 				spellcheck="false"
-				aria-label="Buscar sección o acción"
+				aria-label={t.palette.searchLabel}
 				aria-autocomplete="list"
 				aria-controls="palette-list"
 				aria-activedescendant=""
 			/>
 		</label>
-		<ul id="palette-list" class="palette-list" role="listbox" aria-label="Resultados de búsqueda"></ul>
+		<ul id="palette-list" class="palette-list" role="listbox" aria-label={t.palette.resultsLabel}></ul>
 	</div>
 </dialog>
 
@@ -31,7 +43,7 @@
 
 	const sectionItems = Array.from(document.querySelectorAll('[data-nav]')).map((el) => ({
 		label: el.dataset.nav,
-		tag: 'sección',
+		tag: dialog.dataset.section,
 		run: () => {
 			el.scrollIntoView(scroll({ block: 'start' }));
 			el.focus({ preventScroll: true });
@@ -47,8 +59,8 @@
 	};
 
 	const actionItems = [
-		{ label: 'Descargar CV (PDF)', tag: 'acción', run: () => document.getElementById('print-btn')?.click() },
-		{ label: 'Alternar tema', tag: 'acción', run: toggleTheme },
+		{ label: dialog.dataset.downloadCv, tag: dialog.dataset.action, run: () => document.getElementById('print-btn')?.click() },
+		{ label: dialog.dataset.toggleTheme, tag: dialog.dataset.action, run: toggleTheme },
 	];
 
 	let currentItems = [];
@@ -68,7 +80,7 @@
 		if (!items.length) {
 			const empty = document.createElement('li');
 			empty.className = 'palette-empty';
-			empty.textContent = 'Sin resultados';
+			empty.textContent = dialog.dataset.empty;
 			list.appendChild(empty);
 			return;
 		}

@@ -1,10 +1,14 @@
 ---
-import { cv } from '../data.js';
+import { getCv, getUi } from '../i18n/index.js';
+
+const locale = Astro.currentLocale ?? 'es';
+const cv = getCv(locale);
+const t = getUi(locale);
 ---
 
 <footer class="page-foot">
 	<p class="term" aria-hidden="true"><span class="prompt">$</span> echo done</p>
 	<p>
-		{cv.profile.alias} <span class="comment" aria-hidden="true">//</span> gracias por leer
+		{cv.profile.alias} <span class="comment" aria-hidden="true">//</span> {t.footer.thanks}
 	</p>
 </footer>

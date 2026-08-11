@@ -1,39 +1,49 @@
 ---
-import { cv } from '../data.js'
+import { getCv, getUi } from '../i18n/index.js'
 import Icon from './Icon.astro'
+
+const locale = Astro.currentLocale ?? 'es'
+const cv = getCv(locale)
+const t = getUi(locale)
+const base = import.meta.env.BASE_URL
 ---
 
 <header class="topbar">
   <div class="topbar-dots" aria-hidden="true">
     <span></span><span></span><span></span>
   </div>
-  <p class="topbar-title">{cv.profile.alias}.ts — CV</p>
+  <p class="topbar-title">{cv.profile.alias}.ts — {t.topbar.title}</p>
   <div class="topbar-actions">
+    <nav class="lang-switcher" aria-label={t.topbar.langLabel}>
+      <a class="lang-link" href={base + 'es/'} data-astro-reload aria-current={locale === 'es' ? 'true' : undefined} lang="es">ES</a>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <a class="lang-link" href={base + 'en/'} data-astro-reload aria-current={locale === 'en' ? 'true' : undefined} lang="en">EN</a>
+    </nav>
     <button
       id="theme-toggle"
       class="btn btn--ghost"
       type="button"
       aria-pressed="false"
-      aria-label="Cambiar tema"
+      aria-label={t.topbar.theme}
     >
-      <Icon name="theme" /><span class="btn-label">Tema</span>
+      <Icon name="theme" /><span class="btn-label">{t.topbar.theme}</span>
     </button>
     <a
       id="print-btn"
       class="btn btn--ghost"
-      href={import.meta.env.BASE_URL + cv.profile.cvUrl}
+      href={base + cv.profile.cvUrl}
       download="CV-DanielBarroso.pdf"
-      aria-label="Descargar CV"
+      aria-label={t.topbar.download}
     >
-      <Icon name="download" /><span class="btn-label">Descargar CV</span>
+      <Icon name="download" /><span class="btn-label">{t.topbar.download}</span>
     </a>
     <button
       id="palette-btn"
       class="btn btn--ghost btn--palette"
       type="button"
-      aria-label="Buscar"
+      aria-label={t.topbar.search}
     >
-      <Icon name="search" /><span class="btn-label">Buscar</span><kbd
+      <Icon name="search" /><span class="btn-label">{t.topbar.search}</span><kbd
         >Ctrl K</kbd
       >
     </button>

@@ -1,5 +1,9 @@
 ---
-import { cv } from '../data.js';
+import { getCv, getUi } from '../i18n/index.js';
+
+const locale = Astro.currentLocale ?? 'es';
+const cv = getCv(locale);
+const t = getUi(locale);
 const links = cv.profile.links;
 const externalAttrs = (url) =>
 	url.startsWith('mailto:') || url.startsWith('tel:')
@@ -7,7 +11,7 @@ const externalAttrs = (url) =>
 		: { target: '_blank', rel: 'noopener noreferrer' };
 ---
 
-<header id="cabecera" class="hero" data-nav="Inicio" tabindex="-1">
+<header id="cabecera" class="hero" data-nav={cv.sections.hero.nav} tabindex="-1">
 	<p class="term" aria-hidden="true"><span class="prompt">$</span> whoami</p>
 	<h1 class="hero-name">{cv.profile.name}</h1>
 	<p class="term term--out" aria-hidden="true"><span class="prompt">$</span> cat role.txt</p>
@@ -16,7 +20,7 @@ const externalAttrs = (url) =>
 	</p>
 	<p class="tagline">{cv.profile.tagline}</p>
 	<p class="hero-location">{cv.profile.location}</p>
-	<nav class="hero-links" aria-label="Enlaces de contacto">
+	<nav class="hero-links" aria-label={t.hero.contact}>
 		<ul>
 			{links.map((l) => (
 				<li>

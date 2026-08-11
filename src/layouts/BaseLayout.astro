@@ -1,16 +1,22 @@
 ---
-import { cv } from '../data.js';
+import { getCv, getUi, locales } from '../i18n/index.js';
 import '../styles.css';
 import TopBar from '../components/TopBar.astro';
 import Footer from '../components/Footer.astro';
 import CommandPalette from '../components/CommandPalette.astro';
 
 interface Props {
+	locale: string;
 	title?: string;
 	description?: string;
 }
 
-const { title = cv.meta.title, description = cv.meta.description } = Astro.props;
+const { locale, title, description } = Astro.props;
+const cv = getCv(locale);
+const t = getUi(locale);
+const pageTitle = title ?? cv.meta.title;
+const pageDescription = description ?? cv.meta.description;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -19,11 +25,13 @@ const { title = cv.meta.title, description = cv.meta.description } = Astro.props
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
+		<meta name="description" content={pageDescription} />
 		<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
 		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-		<link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + 'favicon.svg'} />
-		<title>{title}</title>
+		<link rel="icon" type="image/svg+xml" href={base + 'favicon.svg'} />
+		<link rel="alternate" hreflang={locales[0]} href={base + 'es/'} />
+		<link rel="alternate" hreflang={locales[1]} href={base + 'en/'} />
+		<title>{pageTitle}</title>
 		<script is:inline>
 			// Evita parpadeo de tema antes del primer pintado
 			try {
@@ -36,7 +44,7 @@ const { title = cv.meta.title, description = cv.meta.description } = Astro.props
 		</script>
 	</head>
 	<body>
-		<a class="skip-link" href="#contenido">Saltar al contenido</a>
+		<a class="skip-link" href="#contenido">{t.skipLink}</a>
 		<TopBar />
 		<main id="contenido">
 			<slot />

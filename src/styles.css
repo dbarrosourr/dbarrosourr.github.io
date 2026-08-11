@@ -220,6 +220,42 @@ a:focus-visible {
 	margin-left: auto;
 }
 
+.lang-switcher {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.15rem;
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 0.35rem 0.5rem;
+	border-radius: 6px;
+	border: 1px solid var(--border);
+	background: var(--bg);
+	white-space: nowrap;
+}
+
+.lang-link {
+	color: var(--fg-muted);
+	text-decoration: none;
+	padding: 0.05rem 0.2rem;
+	border-radius: 4px;
+	transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.lang-link:hover {
+	color: var(--fg);
+	background: var(--accent-soft);
+}
+
+.lang-link[aria-current='true'] {
+	color: var(--accent);
+	background: var(--accent-soft);
+}
+
+.lang-sep {
+	color: var(--border);
+}
+
 /* ------------------------------------------------------------------ */
 /*  Botones                                                            */
 /* ------------------------------------------------------------------ */
@@ -824,6 +860,10 @@ html.js [data-reveal].in-view {
 		padding: 0;
 		gap: 0;
 		font-size: 0.8rem;
+	}
+
+	.lang-switcher {
+		padding: 0.35rem 0.35rem;
 	}
 
 	.topbar .btn-label,

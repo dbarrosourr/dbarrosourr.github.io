@@ -1,14 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const locale = Astro.url.pathname.startsWith('/en/') ? 'en' : 'es';
+const strings = {
+  es: { title: '404 · No encontrado', error: 'no existe el fichero o el directorio.', home: 'Vuelve al inicio' },
+  en: { title: '404 · Not found', error: 'no such file or directory.', home: 'Back to home' },
+};
+const homeUrl = import.meta.env.BASE_URL + locale + '/';
 ---
 
-<BaseLayout title="404 · No encontrado">
+<BaseLayout locale={locale} title={strings[locale].title}>
 	<section class="section" tabindex="-1">
 		<h2 class="section-title"><span class="comment" aria-hidden="true">//</span> 404</h2>
 		<p class="prose">
 			<span class="term" aria-hidden="true"><span class="prompt">$</span> ls ./pagina</span>
 			<br />
-			ls: no existe el fichero o el directorio. <a href={import.meta.env.BASE_URL}>Vuelve al inicio</a>.
+			ls: {strings[locale].error} <a href={homeUrl}>{strings[locale].home}</a>.
 		</p>
 	</section>
 </BaseLayout>
