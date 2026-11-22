@@ -93,6 +93,35 @@ export const cv = {
 
   projects: [
     {
+      name: 'Homelab Kubernetes on Raspberry Pi',
+      images: ['img/homelab.png'],
+      wide: true,
+      imageAlt:
+        'Homelab architecture diagram: Cloudflare and its tunnel into a k3s cluster of three Raspberry Pis with Traefik, Argo CD, Prometheus, Grafana, AdGuard and backups to Cloudflare R2.',
+      description:
+        'Self-hosted Kubernetes cluster on three Raspberry Pi 4 boards: provisioned with Ansible, delivered via GitOps with Argo CD, internal DNS with AdGuard, observability with Prometheus and Grafana, secrets encrypted with Sealed Secrets and daily backups to Cloudflare R2.',
+      stack: [
+        'Kubernetes',
+        'k3s',
+        'Ansible',
+        'Argo CD',
+        'GitOps',
+        'Prometheus',
+        'Grafana',
+        'Cloudflare',
+        'ARM64',
+      ],
+      links: [
+        { label: 'Live demo', url: 'https://dbarroso.dev/live' },
+        {
+          label: 'Source',
+          url: 'https://github.com/byMagg/homelab-infrastructure',
+        },
+      ],
+      result:
+        'Running 24/7 and publicly demoable at dbarroso.dev/live: restore drill verified with 18 s of downtime, ntfy alerts and no plaintext secrets in Git.',
+    },
+    {
       name: 'Cryptocurrency monitor with Flutter',
       images: ['img/tradingbot_1.jpg', 'img/tradingbot_2.jpg'],
       description:

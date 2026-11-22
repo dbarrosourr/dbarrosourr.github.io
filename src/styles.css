@@ -570,6 +570,19 @@ main {
 	margin: 0 auto 0.8rem;
 }
 
+.project-media--wide {
+	max-width: 100%;
+}
+
+.project-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 1.1rem;
+	margin-bottom: 0.7rem;
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.85rem;
+}
+
 .project-window {
 	flex: 1 1 0;
 	min-width: 0;

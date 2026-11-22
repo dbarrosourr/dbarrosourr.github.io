@@ -11,7 +11,7 @@ const t = getUi(locale);
 	{cv.projects.map((p) => (
 		<article class="project" data-reveal>
 			{p.images?.length && (
-				<div class="project-media">
+				<div class={`project-media${p.wide ? ' project-media--wide' : ''}`}>
 					{p.images.map((img) => (
 						<div class="project-window">
 							<div class="window-bar" aria-hidden="true">
@@ -22,7 +22,7 @@ const t = getUi(locale);
 							</div>
 							<img
 								src={import.meta.env.BASE_URL + img}
-								alt={p.name}
+								alt={p.imageAlt ?? p.name}
 								loading="lazy"
 							/>
 						</div>
@@ -34,6 +34,15 @@ const t = getUi(locale);
 			<p class="project-stack" aria-label={t.projects.stack}>
 				{p.stack.map((s) => <span class="chip">{s}</span>)}
 			</p>
+			{p.links?.length && (
+				<p class="project-links">
+					{p.links.map((l) => (
+						<a href={l.url} target="_blank" rel="noopener noreferrer">
+							{l.label} <span aria-hidden="true">↗</span>
+						</a>
+					))}
+				</p>
+			)}
 			<p class="project-result">
 				<strong>{t.projects.result}:</strong> {p.result}
 			</p>
