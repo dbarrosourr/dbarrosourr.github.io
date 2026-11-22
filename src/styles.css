@@ -353,6 +353,75 @@ a:focus-visible {
 	font-size: 0.9rem;
 }
 
+/* Enlace al observatorio en vivo */
+.btn--live {
+	border-color: var(--accent);
+	background: var(--accent-soft);
+	text-decoration: none;
+}
+
+.live-dot,
+.live-cta-dot {
+	width: 0.55rem;
+	height: 0.55rem;
+	border-radius: 50%;
+	background: var(--success);
+	flex: none;
+	animation: livePulse 2s ease-in-out infinite;
+}
+
+.live-cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-top: 1.2rem;
+	padding: 0.7rem 1rem;
+	border: 1px solid var(--accent);
+	border-radius: 8px;
+	background: linear-gradient(90deg, var(--accent-soft), transparent 75%);
+	color: var(--fg);
+	text-decoration: none;
+	transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.live-cta:hover {
+	background-color: var(--accent-soft);
+	box-shadow: 0 0 0 1px var(--accent);
+}
+
+.live-cta-copy {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.25;
+}
+
+.live-cta-copy strong {
+	font-size: 0.95rem;
+}
+
+.live-cta-copy span {
+	font-size: 0.8rem;
+	color: var(--fg-muted);
+}
+
+.live-cta-arrow {
+	margin-left: 0.4rem;
+	color: var(--accent);
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+}
+
+@keyframes livePulse {
+	0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.45); }
+	50% { box-shadow: 0 0 0 6px rgba(63, 185, 80, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.live-dot,
+	.live-cta-dot {
+		animation: none;
+	}
+}
+
 .hero-links ul {
 	display: flex;
 	flex-wrap: wrap;

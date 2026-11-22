@@ -19,6 +19,9 @@ const base = import.meta.env.BASE_URL
       <span class="lang-sep" aria-hidden="true">/</span>
       <a class="lang-link" href={base + 'en/'} data-astro-reload aria-current={locale === 'en' ? 'true' : undefined} lang="en">EN</a>
     </nav>
+    <a id="live-btn" class="btn btn--live" href={base + 'live'} aria-label={t.topbar.live}>
+      <span class="live-dot" aria-hidden="true"></span><span class="btn-label">{t.topbar.live}</span>
+    </a>
     <button
       id="theme-toggle"
       class="btn btn--ghost"

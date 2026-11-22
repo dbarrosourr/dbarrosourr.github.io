@@ -13,10 +13,15 @@ const ui = {
       theme: 'Tema',
       download: 'Descargar CV',
       search: 'Buscar',
+      live: 'Homelab en vivo',
       langLabel: 'Idioma',
     },
     skipLink: 'Saltar al contenido',
-    hero: { contact: 'Enlaces de contacto' },
+    hero: {
+      contact: 'Enlaces de contacto',
+      liveTitle: 'Homelab en vivo',
+      liveSub: 'cluster, GitOps, backups y alertas en tiempo real',
+    },
     footer: { thanks: 'gracias por leer' },
     projects: { stack: 'Stack tecnológico', result: 'Resultado' },
     palette: {
@@ -36,10 +41,15 @@ const ui = {
       theme: 'Theme',
       download: 'Download CV',
       search: 'Search',
+      live: 'Live homelab',
       langLabel: 'Language',
     },
     skipLink: 'Skip to content',
-    hero: { contact: 'Contact links' },
+    hero: {
+      contact: 'Contact links',
+      liveTitle: 'Live homelab',
+      liveSub: 'cluster, GitOps, backups and alerts in real time',
+    },
     footer: { thanks: 'thanks for reading' },
     projects: { stack: 'Tech stack', result: 'Result' },
     palette: {
