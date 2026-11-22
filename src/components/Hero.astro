@@ -6,7 +6,7 @@ const cv = getCv(locale);
 const t = getUi(locale);
 const links = cv.profile.links;
 const base = import.meta.env.BASE_URL;
-const liveHref = base + (locale === 'en' ? 'live?lang=en' : 'live');
+const liveHref = 'https://dbarroso.dev/live' + (locale === 'en' ? '?lang=en' : '');
 const externalAttrs = (url) =>
 	url.startsWith('mailto:') || url.startsWith('tel:')
 		? {}
